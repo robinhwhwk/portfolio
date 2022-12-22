@@ -10,6 +10,9 @@
     <link rel="stylesheet" 
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" 
     integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+
 </head>
 <body>
     <header>
@@ -23,7 +26,7 @@
             <ul class="nav__list">
                 <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
                 <li class="nav__item"><a href="#projects" class="nav__link">My Projects</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">My Skills</a></li>
+                <li class="nav__item"><a href="#skills" class="nav__link">My Skills</a></li>
             </ul>
         </nav>
     </header>
@@ -32,37 +35,84 @@
         <h1 class="section__title section__title--intro">
             Hi, I'm <strong>Robin Kim</strong>
         </h1>
-        <p class="section__subtitle section__subtitle--intro">back-end dev</p>
+        <p class="section__subtitle section__subtitle--intro">Software Engineer</p>
     </section>
     <!-- My Projects -->
     <section class="projects" id="projects">
         <h2 class="section__title section__title--projects">My Projects</h2>
         <div class="projects">
+
             <div class="project">
-                <h3></h3>
+                <h3>Spotify Song Recommender</h3>
                 <p>
-                    Magna deserunt exercitation exercitation ex reprehenderit enim incididunt dolore cillum. Reprehenderit in sunt ex consequat anim ex officia incididunt aliqua do Lorem proident ea. Tempor culpa tempor irure proident aliqua sit id occaecat. Esse laboris nisi ipsum eu. Mollit ut commodo dolor reprehenderit enim sint. Esse do excepteur ipsum aute.
+                    Web application that allows users to discover new J-Pop music and learn more about their favorite artists. 
+                    The application features personalized song recommendations based on the user's choice of songs, artists, or genres, 
+                    as well as detailed information on songs and artists, including lyrics and discographies. 
+                    The application also includes a leaderboard that displays the top artists in the J-Pop genre.
+                    
                 </p>
+                <a href="https://github.com/robinhwhwk/spotify-recommendation" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i> View on GitHub
+                  </a>
+                <a href="https://demo.spotify-recommendation.com" class="btn btn-demo" target="_blank" rel="noopener noreferrer">
+                    View Demo</a>
             </div> <!-- project -->
                 
             <div class="project">
-                <h3></h3>
+                <h3>Cryptocurrency Sentiment Analysis</h3>
                 <p>
                     Lorem ea sit excepteur pariatur commodo consequat et laboris voluptate. Minim sint commodo ex tempor ut et dolor incididunt. Labore occaecat est quis laboris do commodo mollit. Reprehenderit et tempor excepteur culpa culpa nulla veniam et et nisi ullamco nisi exercitation. Incididunt officia aliquip labore velit. Pariatur est adipisicing consequat duis voluptate consectetur reprehenderit sit irure tempor eiusmod.
                 </p>
+                <a href="https://github.com/robinhwhwk/crypto_analysis" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i> View on GitHub
+                  </a>
             </div> <!-- project -->
 
             <div class="project">
-                <h3></h3>
+                <h3>Naniro - Color Guessing Game</h3>
                 <p>
                     Ut officia anim culpa pariatur ut magna. Irure officia amet eu duis velit commodo do enim. Incididunt do laborum commodo ad irure occaecat est et eiusmod. Cupidatat aliqua in reprehenderit reprehenderit duis amet irure esse nisi nisi. Laboris ullamco veniam consequat exercitation ea labore tempor culpa exercitation nisi officia.
                 </p>
+                <a href="https://github.com/robinhwhwk/naniro" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i> View on GitHub
+                  </a>
             </div> <!-- project -->
         </div> 
     </section>
-    <section class="about-me" id="about">
-        <h2 class="section__title section__title--about">Who I am</h2>
-        <p class="section__subtitle section__subtitle--about"></p>
-    </section>
+    <!-- My Skills -->
+<section class="skills" id="skills">
+    <h2 class="section__title section__title--skills">My Skills</h2>
+    <div class="skills__list">
+
+        <div class="skill">
+            <h4>Python</h4>
+            <p>Proficient in Python, with experience in building web applications using the Django framework.</p>
+          </div> <!-- skill -->  
+        <div class="skill">
+        <h4>JavaScript</h4>
+        <p>Experienced in JavaScript, with experience in building web applications using techniques such as Ajax.</p>
+      </div> <!-- skill -->
+
+  
+      <div class="skill">
+        <h4>Databases</h4>
+        <p>Proficient with the use of PostgreSQL, MySQL in data storage and management in web applications. Experienced in designing and implementing database schemas.</p>
+      </div> <!-- skill -->
+  
+      <div class="skill">
+        <h4>C#</h4>
+        <p>Proficient in C#, with experience in building Unity Game Applications.</p>
+      </div> <!-- skill -->
+    </div> <!-- skills__list -->
+  </section>
+  
+  <!-- Footer -->
+  <footer>
+    <p>
+      Made with <i class="fas fa-heart"></i> by Robin &copy; 2022. 
+      <a href="mailto:robinhwhwk@gmail.com">Contact me</a>.
+    </p>
+  </footer>
+  
 </body>
 </html>
