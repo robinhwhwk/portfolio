@@ -255,3 +255,17 @@ top: 50%;
 transform: translateY(-50%);
 right: -20px;
 }
+
+.flex-container {
+  display: flex;
+}
+
+.flex-child {
+  flex: 1;
+  padding: 5%;
+}
+
+.chatbox {
+  border: 2px solid white;
+  height: 400px;
+}

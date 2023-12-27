@@ -1,4 +1,5 @@
-
+import { FaGithub, FaHeart } from "react-icons/fa";
+import { FaDisplay } from "react-icons/fa6";
 
 function App() {
   return (
@@ -31,12 +32,18 @@ function App() {
   </header>
   {/* Introduction */}
   <section className="intro" id="home">
-    <h1 className="section__title section__title--intro">
-      Hello <i className="hello"></i>
-    </h1>
-    <p className="section__subtitle section__subtitle--intro">
-    I’m Robin, a software developer from Georgia who enjoys building fun things.
-    </p>
+    <div className="flex-container">
+      <div className="flex-child">
+        <h1 className="section__title section__title--intro">
+          Hello <span role="img" aria-label="hello">👋</span>
+        </h1>
+        <p className="section__subtitle section__subtitle--intro">
+        I’m Robin, a software developer from Georgia who enjoys building fun things.
+        </p>
+      </div>
+      <div className="chatbox flex-child">
+      </div>
+    </div>
   </section>
   {/* My Projects */}
   <section className="projects" id="projects">
@@ -58,15 +65,14 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i className="fab fa-github" /> View on GitHub
+          <FaGithub /> View on GitHub
         </a>
         <a
           href="https://www.jpopify.com"
-          className="btn btn-demo"
           target="_blank"
           rel="noopener noreferrer"
         >
-          View Demo
+          <FaDisplay /> View Demo
         </a>
       </div>{" "}
       {/* project */}
@@ -86,7 +92,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i className="fab fa-github" /> View on GitHub
+          <FaGithub /> View on GitHub
         </a>
       </div>{" "}
       {/* project */}
@@ -103,15 +109,15 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i className="fab fa-github" /> View on GitHub
+          <FaGithub /> View on GitHub
         </a>
         <a
           href="https://robinhwhwk.github.io/naniro/"
-          className="btn btn-demo"
+          // className="btn btn-demo"
           target="_blank"
           rel="noopener noreferrer"
         >
-          View Demo
+          <FaDisplay /> View Demo
         </a>
       </div>{" "}
       {/* project */}
@@ -159,8 +165,8 @@ function App() {
   {/* Footer */}
   <footer>
     <p>
-      Made with <i className="fas fa-heart" /> by Robin © 2022.
-      <a href="mailto:robinhwhwk@gmail.com">Contact me</a>.
+      Made with <FaHeart /> by Robin © 2022
+      <a href="mailto:robinhwhwk@gmail.com"> Contact me</a>
     </p>
   </footer>
     </div>
