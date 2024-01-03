@@ -1,9 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { FaRedo } from 'react-icons/fa';
+import EmailForm from './EmailForm';
 
 // Define the knowledge base
 const knowledge = {
     "start": {
+      id: "start",
       prompts: ["What can I help you with today?",],
       options: [
         {command:"Tell me about yourself.", nextId: "intro"}, 
@@ -11,18 +13,21 @@ const knowledge = {
         {command:"Send a message", nextId: "message"}],
     },
     "intro": {
+      id: "intro",
       prompts: ["I'm Robin. I'm a student at Georgia Tech studying computer science.", "I like building fun things in my free time."],
       options: [
         {command:"Any hobbies?", nextId: "hobby"}, 
         {command:"Send a message", nextId: "message"}],
     }, 
     "hobby": {
+      id: 'hobby',
       prompts: ["Outside of work, I enjoy reading, spending time with family, and playing basketball.",],
       options: [
         {command:"Tell me about yourself.", nextId: "intro"}, 
         {command:"Send a message", nextId: "message"}],
     },
     "message": {
+      id: "message",
       prompts: ["Great! Just type your message below.", "I will be notified when it's sent."],
       options: [
         {command:"Tell me about yourself.", nextId: "intro"}, 
@@ -70,6 +75,11 @@ const Chatbot = () => {
 
   const ChatInput = (props) => {
     if (props.index === conversationList.length - 1) {
+      if (props.conversation.id == "message") {
+        return (
+          <EmailForm></EmailForm>
+        )
+      }
       return (
         <li key={props.index} className="chat input">
         {currentConversation.options.map((option) => (
@@ -117,7 +127,7 @@ const Chatbot = () => {
               })}
             <ChatOutgoing conv={conversation} index={index}></ChatOutgoing>
   
-            <ChatInput index={index}></ChatInput>
+            <ChatInput conversation={conversation} index={index}></ChatInput>
           </div>
           )
         })}

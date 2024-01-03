@@ -304,6 +304,10 @@ right: -20px;
   border: 2px solid white;
 } */
 
+form.flex-container {
+  flex-flow: column;
+}
+
 .chatbot {
   width: 500px; /* Adjust as needed */
   height: 500px;
