@@ -1,5 +1,9 @@
-import { FaGithub, FaHeart } from "react-icons/fa";
+import { FaGithub, FaHeart, FaLinkedin, FaRegNewspaper } from "react-icons/fa";
 import { FaDisplay } from "react-icons/fa6";
+import { CiMail } from "react-icons/ci";
+import Chatbot from "./Chatbot.js"
+import Skills from "./Skills.js"
+import Pdf from "./files/resume.pdf"
 
 function App() {
   return (
@@ -19,12 +23,12 @@ function App() {
         </li>
         <li className="nav__item">
           <a href="#projects" className="nav__link">
-            My Projects
+            Projects
           </a>
         </li>
         <li className="nav__item">
           <a href="#skills" className="nav__link">
-            My Skills
+            Skills
           </a>
         </li>
       </ul>
@@ -40,9 +44,16 @@ function App() {
         <p className="section__subtitle section__subtitle--intro">
         I’m Robin, a software developer from Georgia who enjoys building fun things.
         </p>
+        <p className="section__subtitle section__subtitle--intro">
+          Interested in my work? Let's connect!</p>
+        <div className="links flex-container">
+          <a href="https://github.com/robinhwhwk" target="_blank" rel="noopener noreferrer" className="flex-child"><FaGithub /> GitHub</a>
+          <a href="https://www.linkedin.com/in/robin-hyunwoo-kim-28828b218/" target="_blank" rel="noopener noreferrer" className="flex-child"><FaLinkedin /> LinkedIn</a>
+          <a href="mailto:robinhwhwk@gmail.com" target="_blank" rel="noopener noreferrer" className="flex-child"><CiMail /> Email</a>
+          <a href={Pdf} target="_blank" rel="noopener noreferrer" className="flex-child"><FaRegNewspaper /> Resume</a>
+        </div>
       </div>
-      <div className="chatbox flex-child">
-      </div>
+        <Chatbot></Chatbot>
     </div>
   </section>
   {/* My Projects */}
@@ -123,49 +134,15 @@ function App() {
       {/* project */}
     </div>
   </section>
-  {/* My Skills */}
   <section className="skills" id="skills">
-    <h2 className="section__title section__title--skills">My Skills</h2>
-    <div className="skills__list">
-      <div className="skill">
-        <h4>Python</h4>
-        <p>
-          Proficient in Python, with experience in building web applications
-          using the Django framework.
-        </p>
-      </div>{" "}
-      {/* skill */}
-      <div className="skill">
-        <h4>JavaScript</h4>
-        <p>
-          Experienced in JavaScript, with experience in building web
-          applications using techniques such as Ajax.
-        </p>
-      </div>{" "}
-      {/* skill */}
-      <div className="skill">
-        <h4>Databases</h4>
-        <p>
-          Proficient with the use of PostgreSQL, MySQL in data storage and
-          management in web applications. Experienced in designing and
-          implementing database schemas.
-        </p>
-      </div>{" "}
-      {/* skill */}
-      <div className="skill">
-        <h4>C#</h4>
-        <p>
-          Proficient in C#, with experience in building Unity Game Applications.
-        </p>
-      </div>{" "}
-      {/* skill */}
-    </div>{" "}
-    {/* skills__list */}
-  </section>
+  <h2 className="section__title section__title--skills">My Skills</h2>
+  <Skills></Skills>
+ </section>
+
   {/* Footer */}
   <footer>
     <p>
-      Made with <FaHeart /> by Robin © 2022
+      Made with <FaHeart /> by Robin © 2024
       <a href="mailto:robinhwhwk@gmail.com"> Contact me</a>
     </p>
   </footer>

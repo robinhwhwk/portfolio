@@ -9,7 +9,9 @@ body {
 header {
   background-color: #000;
   color: #fff;
-  display: flex;
+  display: block;
+  position: relative;
+  text-align: center;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
@@ -110,28 +112,34 @@ header {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 100vh;
+  /* height: 100vh; */
   background-color: #000;
   color: #fff;
 }
 
 .section__title--intro {
-  font-size: 72px;
+  font-size: 64px;
   margin-bottom: 10px;
 }
 
 .section__subtitle--intro {
-  font-size: 36px;
+  font-size: 28px;
 }
 
-.projects {
+section {
+  overflow: hidden;
   padding: 50px;
 }
 
+.projects {
+  padding-left: 20px;
+}
+
 .section__title--projects {
-  font-size: 36px;
+  font-size: 28px;
   margin-bottom: 50px;
 }
+
 
 .project {
   margin-bottom: 50px;
@@ -147,19 +155,24 @@ header {
   line-height: 1.5;
 }
 
+.skills__list.flex-container{
+  display: flex;
+  flex-flow: column;
+}
+
+.skills__list .flex-child {
+  padding-left: 20px;
+}
+
+
 .skills {
   padding: 50px;
+  color: white;
 }
 
 .section__title--skills {
   font-size: 36px;
   margin-bottom: 50px;
-}
-
-.skills__list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .skill {
@@ -258,14 +271,169 @@ right: -20px;
 
 .flex-container {
   display: flex;
+  flex-flow: wrap;
+}
+
+.links.flex-container {
+  flex-flow: column;
+}
+
+.links a {
+  width: fit-content;
+  text-decoration: none;
+  color: inherit;
+}
+.links a:hover {
+  color: #999;
 }
 
 .flex-child {
   flex: 1;
-  padding: 5%;
 }
 
-.chatbox {
+.links {
+  margin-top: 50px;
+  width: 50%;
+}
+
+.links .flex-child {
+  padding: 10px;
+}
+
+/* .chatbox {
   border: 2px solid white;
-  height: 400px;
+} */
+
+.chatbot {
+  width: 500px; /* Adjust as needed */
+  height: 500px;
+  margin: 0 auto;
+  /* border: 1px solid #ccc; */
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
+              0 32px 64px -48px rgba(0,0,0,0.5);
+  overflow-y: auto;
+}
+
+.chatbot header {
+  background: #724ae8;
+  padding: 16px 0;
+  text-align: center;
+}
+
+.chatbot header h2 {
+  color: #fff;
+  font-size: 1.4rem;
+  display: block;
+  margin: auto;
+}
+
+.chatbot .chatbox {
+  padding: 30px 20px 70px 10px;
+  min-height: 60%;
+}
+
+.chatbox .chat {
+  display: flex;
+}
+
+.chatbox .incoming span {
+  height: 32px;
+  width: 32px;
+  background: #724ae8;
+  color: #fff;
+  align-self: flex-end;
+  text-align: center;
+  line-height: 32px;
+  border-radius: 4px;
+  margin: 0 10px 7px 0;
+}
+
+.chatbox .outgoing {
+  margin: 20px 0;
+  justify-content: flex-end;
+}
+
+.chatbox .input {
+  margin: 20px 0;
+  justify-content: flex-end;
+}
+
+.chatbox .chat p {
+  color: #fff;
+  max-width: 75%;
+  font-size: 0.95rem;
+  padding: 12px 14px;
+  border-radius: 10px 10px 0 10px;
+  background-color: #248bf5;
+  margin: 10px 0 0 0;
+}
+
+.chatbox .incoming p {
+  color: #000;
+  background: #f2f2f2;
+  border-radius: 10px 10px 10px 0;
+}
+
+.chatbox .input p {
+  background: #000;
+  margin: 0 0 0 0;
+  border: 0.1px solid #fff;
+}
+
+.chatbox .input button {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.chatbot-question {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.chatbox .input p:hover {
+  background-color: #2f2f2f;
+}
+
+
+.chatbot-buttons button {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 10px 15px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.chatbot-buttons button:hover {
+  background-color: #e0e0e0;
+}
+
+@media(max-width: 490px) {
+  .chatbot {
+    right: 0;
+    width: 100%;
+  }
+
+}
+
+ul {
+  list-style-type: none;
+}
+
+.profile-photo {
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+
+svg tspan {
+  fill: white;
 }
