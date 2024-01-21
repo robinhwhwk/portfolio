@@ -4,6 +4,10 @@ import { CiMail } from "react-icons/ci";
 import Chatbot from "./Chatbot.js"
 import Skills from "./Skills.js"
 import Pdf from "./files/resume.pdf"
+import SpotifyGif from "./images/spotify.gif"
+import Naniro from "./images/naniro.gif"
+import Plantomo from "./images/plantomo.png"
+import CryptoAnalysis from './images/crypto_analysis.png'
 
 function App() {
   return (
@@ -56,20 +60,37 @@ function App() {
         <Chatbot></Chatbot>
     </div>
   </section>
-  {/* My Projects */}
-  <section className="projects" id="projects">
+  <section id="projects">
     <h2 className="section__title section__title--projects">My Projects</h2>
     <div className="projects">
+    <div className="project">
+        <h3>Plantomo</h3>
+        <img src={Plantomo} alt="Plantomo" className="project_image"/>
+        <p>
+        A mobile game designed to bring people outside and learn more about their surrounding nature. Built with Unity, C#, and Firebase for the 2023 Google Developer Solutions Challenge.
+        </p>
+        <a
+          href="https://github.com/Andrew920528/GDSC2023"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaGithub /> View on GitHub
+        </a>
+        <a
+          href="https://www.youtube.com/watch?v=8LHcoZL0cPo"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaDisplay /> View Demo Video
+        </a>
+      </div>
       <div className="project">
         <h3>Spotify Song Recommender</h3>
+        <img src={SpotifyGif} alt="Spotify Recommendation App" className="project_image"/>
         <p>
-          Web application that allows users to discover new J-Pop music and
-          learn more about their favorite artists. The application features
-          personalized song recommendations based on the user's choice of songs,
-          artists, or genres, as well as detailed information on songs and
-          artists, including lyrics and discographies. The application also
-          includes a leaderboard that displays the top artists in the J-Pop
-          genre.
+          Web application that allows users to discover new J-Pop music. Personalized song recommendations based on the user's choice of songs,
+          artists and songs, leaderboards for top performing artists and songs in the J-pop genre.
+          Built using Python, Django, JavaScript, HTML, CSS.
         </p>
         <a
           href="https://github.com/robinhwhwk/spotify-recommendation"
@@ -78,17 +99,17 @@ function App() {
         >
           <FaGithub /> View on GitHub
         </a>
-        <a
+        {/* <a
           href="https://www.jpopify.com"
           target="_blank"
           rel="noopener noreferrer"
         >
           <FaDisplay /> View Demo
-        </a>
-      </div>{" "}
-      {/* project */}
+        </a> */}
+      </div>
       <div className="project">
         <h3>Cryptocurrency Sentiment Analysis</h3>
+        <img src={CryptoAnalysis} alt="Cryptocurrency Sentiment Analysis" className="project_image"/>
         <p>
           Web application that allows users to track the public sentiment
           towards a specific cryptocurrency. The application uses the Twitter
@@ -105,10 +126,11 @@ function App() {
         >
           <FaGithub /> View on GitHub
         </a>
-      </div>{" "}
-      {/* project */}
+      </div>
+
       <div className="project">
         <h3>Naniro - Color Guessing Game</h3>
+        <img src={Naniro} alt="Color Guessing Game" className="project_image"/>
         <p>
           Web game that challenges players to guess the hex code for the color
           shown in the background. The game displays a random color in the
@@ -130,8 +152,7 @@ function App() {
         >
           <FaDisplay /> View Demo
         </a>
-      </div>{" "}
-      {/* project */}
+      </div>
     </div>
   </section>
   <section className="skills" id="skills">
@@ -139,7 +160,6 @@ function App() {
   <Skills></Skills>
  </section>
 
-  {/* Footer */}
   <footer>
     <p>
       Made with <FaHeart /> by Robin © 2024

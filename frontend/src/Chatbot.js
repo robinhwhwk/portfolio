@@ -14,14 +14,14 @@ const knowledge = {
     },
     "intro": {
       id: "intro",
-      prompts: ["I'm Robin. I'm a student at Georgia Tech studying computer science.", "I like building fun things in my free time."],
+      prompts: ["I'm Robin. I'm a student at Georgia Tech pursuing a Bachelor's and a Master's degree in Computer Science.", "I'm expecting to graduate by Spring of 2025."],
       options: [
-        {command:"Any hobbies?", nextId: "hobby"}, 
+        {command:"Hobbies?", nextId: "hobby"}, 
         {command:"Send a message", nextId: "message"}],
     }, 
     "hobby": {
       id: 'hobby',
-      prompts: ["Outside of work, I enjoy reading, spending time with family, and playing basketball.",],
+      prompts: ["Outside of work, I enjoy playing basketball, spending time with friends and family, and working on projects.",],
       options: [
         {command:"Tell me about yourself.", nextId: "intro"}, 
         {command:"Send a message", nextId: "message"}],
@@ -31,7 +31,14 @@ const knowledge = {
       prompts: ["Great! Just type your message below.", "I will be notified when it's sent."],
       options: [
         {command:"Tell me about yourself.", nextId: "intro"}, 
-        {command:"Any hobbies?", nextId: "hobby"}, ]
+        {command:"Hobbies?", nextId: "hobby"}, ]
+    }, 
+    "message_sent": {
+      id: "message_sent",
+      prompts: ["Your message has been sent!"],
+      options: [
+        {command:"Tell me about yourself.", nextId: "intro"}, 
+        {command:"Hobbies?", nextId: "hobby"}, ]
     }
     // Add more conversational flows here
   };
@@ -50,8 +57,8 @@ const Chatbot = () => {
   const handleChat = (option) => {
 
     conversationList[conversationList.length - 1].options = [option]
-    conversationList.push({prompts:["thinking..."], options:[]});
-    setCurrentConversation({prompts:["thinking..."], options:[]});
+    conversationList.push({prompts:["🤔"], options:[]});
+    setCurrentConversation({prompts:["🤔"], options:[]});
     
     
     setTimeout(() => {
@@ -77,7 +84,7 @@ const Chatbot = () => {
     if (props.index === conversationList.length - 1) {
       if (props.conversation.id == "message") {
         return (
-          <EmailForm></EmailForm>
+          <EmailForm onSubmit={handleChat} p={props}></EmailForm>
         )
       }
       return (
@@ -128,6 +135,15 @@ const Chatbot = () => {
             <ChatOutgoing conv={conversation} index={index}></ChatOutgoing>
   
             <ChatInput conversation={conversation} index={index}></ChatInput>
+            {/* After hitting the send button on the email,
+            we resume the conversation. The prompt should be a message saying
+            the email was sent successfully, Chat outgoing should be 2 messages.
+            1. 'from: email'
+            2. message content
+            Chat input should be the normal ones for message.
+            So, hitting send message should trigger same handler as
+            other chat inputs.
+            */}
           </div>
           )
         })}
