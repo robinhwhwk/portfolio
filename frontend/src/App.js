@@ -3,9 +3,9 @@ import { FaDisplay } from "react-icons/fa6";
 import { CiMail } from "react-icons/ci";
 import Chatbot from "./Chatbot.js"
 import Skills from "./Skills.js"
-import Pdf from "./files/resume.pdf"
-import SpotifyGif from "./images/spotify.gif"
-import Naniro from "./images/naniro.gif"
+import Pdf from "./files/Resume.pdf"
+import SpotifyImg from "./images/spotify.png"
+import NaniroImg from "./images/naniro.png"
 import Plantomo from "./images/plantomo.png"
 import CryptoAnalysis from './images/crypto_analysis.png'
 
@@ -86,7 +86,7 @@ function App() {
       </div>
       <div className="project">
         <h3>Spotify Song Recommender</h3>
-        <img src={SpotifyGif} alt="Spotify Recommendation App" className="project_image"/>
+        <img src={SpotifyImg} alt="Spotify Recommendation App" className="project_image"/>
         <p>
           Web application that allows users to discover new J-Pop music. Personalized song recommendations based on the user's choice of songs,
           artists and songs, leaderboards for top performing artists and songs in the J-pop genre.
@@ -99,13 +99,13 @@ function App() {
         >
           <FaGithub /> View on GitHub
         </a>
-        {/* <a
+        <a
           href="https://www.jpopify.com"
           target="_blank"
           rel="noopener noreferrer"
         >
           <FaDisplay /> View Demo
-        </a> */}
+        </a>
       </div>
       <div className="project">
         <h3>Cryptocurrency Sentiment Analysis</h3>
@@ -130,7 +130,7 @@ function App() {
 
       <div className="project">
         <h3>Naniro - Color Guessing Game</h3>
-        <img src={Naniro} alt="Color Guessing Game" className="project_image"/>
+        <img src={NaniroImg} alt="Color Guessing Game" className="project_image"/>
         <p>
           Web game that challenges players to guess the hex code for the color
           shown in the background. The game displays a random color in the
