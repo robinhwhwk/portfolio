@@ -16,12 +16,12 @@ function Projects() {
       <nav className="nav">
         <ul className="nav__list">
           <li className="nav__item">
-            <a href="/Home" className="nav__link">
+            <a href="Home" className="nav__link">
               Home
             </a>
           </li>
           <li className="nav__item">
-            <a href="/Projects" className="nav__link">
+            <a href="Projects" className="nav__link">
               Projects
             </a>
           </li>
