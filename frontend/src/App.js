@@ -1,8 +1,8 @@
 import {
-  BrowserRouter as Router,
   Routes,
   Route,
   Navigate,
+  HashRouter,
 } from "react-router-dom";
 
 // import Home component
@@ -14,16 +14,16 @@ function App() {
   return (
       <>
           {/* This is the alias of BrowserRouter i.e. Router */}
-          <Router>
+          <HashRouter>
               <Routes>
                   {/* This route is for home component 
         with exact path "/", in component props 
         we passes the imported component*/}
-                  {/* <Route
+                  <Route
                       exact
                       path="/"
                       element={<Home />}
-                  /> */}
+                  />
 
                   <Route
                       exact
@@ -39,7 +39,7 @@ function App() {
                       element={<Projects />}
                   />
               </Routes>
-          </Router>
+          </HashRouter>
       </>
   );
 }
