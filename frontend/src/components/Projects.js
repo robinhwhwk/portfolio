@@ -2,6 +2,7 @@ import { FaDisplay, FaGithub, FaHeart } from "react-icons/fa6";
 import SpotifyImg from "../images/spotify.png"
 import NaniroImg from "../images/naniro.png"
 import Plantomo from "../images/plantomo.png"
+import Satellite from "../images/satellite.png"
 import CryptoAnalysis from '../images/crypto_analysis.png'
 
 function Projects() {
@@ -33,6 +34,11 @@ function Projects() {
 <h2 className="section__title section__title--projects">Projects</h2>
 <div className="projects-grid">
   {[
+    {
+      title: "Satellite Network Simulator",
+      image: Satellite,
+      description: "Built on top of the Satellite Network Simulator Hypatia simulating LEO (Low Earth Orbit) Satellite networks such as Starlink. Added functionality for simulating the capacity of the network modifying the architecture using Python.",
+    },
     {
       title: "Plantomo",
       image: Plantomo,
@@ -69,14 +75,14 @@ function Projects() {
       </div>
       <p className="project__description">{project.description}</p>
       <div className="project__links">
-        <a
+        {project.github && (<a
           href={project.github}
           target="_blank"
           rel="noopener noreferrer"
           className="project__link"
         >
           <FaGithub /> GitHub
-        </a>
+        </a>)}
         {project.demo && (
           <a
             href={project.demo}
