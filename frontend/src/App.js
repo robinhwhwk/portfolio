@@ -38,14 +38,6 @@ function App() {
                       path="/Projects"
                       element={<Projects />}
                   />
-
-        route endpoints then, redirect triggers 
-        and redirects app to home component with to="/" */}
-                  {/* <Redirect to="/" /> */}
-                  <Route
-                      path="*"
-                      element={<Navigate to="/" />}
-                  />
               </Routes>
           </Router>
       </>
