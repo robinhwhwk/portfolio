@@ -36,11 +36,13 @@ function Projects() {
   {[
     {
       title: "Satellite Network Simulator",
+      tech: "Python, Bash, C++",
       image: Satellite,
       description: "Built on top of the Satellite Network Simulator Hypatia simulating LEO (Low Earth Orbit) Satellite networks such as Starlink. Added functionality for simulating the capacity of the network modifying the architecture using Python.",
     },
     {
       title: "Plantomo",
+      tech: "Unity, C#, Firebase",
       image: Plantomo,
       description: "A mobile game designed to bring people outside and learn more about their surrounding nature. Built with Unity, C#, and Firebase for the 2023 Google Developer Solutions Challenge.",
       github: "https://github.com/Andrew920528/GDSC2023",
@@ -49,18 +51,21 @@ function Projects() {
     },
     {
       title: "Spotify Song Recommender",
+      tech: "Python, Django, PostgreSQL, JavaScript, HTML, CSS",
       image: SpotifyImg,
       description: "Web application that allows users to discover new J-Pop music. Personalized song recommendations based on the user's choice of songs, artists, and songs, leaderboards for top-performing artists and songs in the J-pop genre.",
       github: "https://github.com/robinhwhwk/spotify-recommendation",
     },
     {
       title: "Cryptocurrency Sentiment Analysis",
+      tech: "Python, Django",
       image: CryptoAnalysis,
       description: "Web application that tracks public sentiment towards specific cryptocurrencies using Twitter API and natural language processing techniques to analyze tweet sentiment.",
       github: "https://github.com/robinhwhwk/crypto_analysis"
     },
     {
       title: "Naniro - Color Guessing Game",
+      tech: "JavaScript, HTML, CSS",
       image: NaniroImg,
       description: "Web game challenging players to guess the hex code for a displayed color. Players must input the correct hex code within 6 tries to solve the puzzle.",
       github: "https://github.com/robinhwhwk/naniro",
@@ -70,6 +75,7 @@ function Projects() {
   ].map((project, index) => (
     <div key={index} className="project">
       <h3 className="project__title">{project.title}</h3>
+      <p className="project__tech">{project.tech}</p>
       <div className="project__image-container">
         <img src={project.image} alt={project.title} className="project__image"/>
       </div>

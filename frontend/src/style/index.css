@@ -500,6 +500,14 @@ svg tspan {
   text-align: left;
 }
 
+.project__tech {
+  font-size: 1rem;
+  margin-left: 1rem;
+  margin-top: 0px;
+  text-align: left;
+  font-style: italic;
+}
+
 .project__image-container {
   width: 400px;
   height: auto;
@@ -529,7 +537,7 @@ svg tspan {
 .project__links {
   display: flex;
   justify-content: left;
-  padding: 1rem;
+  padding-left: 1rem;
 }
 
 .project__link {
