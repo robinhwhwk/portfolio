@@ -32,10 +32,10 @@ function Home() {
       <div className="flex-container">
         <div className="flex-child">
           <h1 className="section__title section__title--intro">
-            Hello <span role="img" aria-label="hello">👋</span>
+            Hi, I'm Robin. <span role="img" aria-label="hello">👋</span>
           </h1>
           <p className="section__subtitle section__subtitle--intro">
-          I’m Robin, a Computer Science student pursuing a B.S./M.S. degree at Georgia Tech.
+          I’m a Computer Science student pursuing a B.S./M.S. degree at Georgia Tech.
           </p>
           <p className="section__subtitle section__subtitle--intro">
           My interests are: Computer Networks, Operating Systems and Full-stack development.
@@ -43,9 +43,9 @@ function Home() {
           <p className="section__subtitle section__subtitle--intro">
             My specialization is in Computing Systems and I'm currently a teaching assistant for a computer networking course at Georgia Tech.</p>
           <div className="links flex-container">
-            <a href="https://github.com/robinhwhwk" target="_blank" rel="noopener noreferrer" className="flex-child"><FaGithub /> GitHub</a>
-            <a href="https://www.linkedin.com/in/robinhwkim/" target="_blank" rel="noopener noreferrer" className="flex-child"><FaLinkedin /> LinkedIn</a>
-            <a href={Pdf} target="_blank" rel="noopener noreferrer" className="flex-child"><FaRegNewspaper /> Resume</a>
+            <a href="https://github.com/robinhwhwk" target="_blank" rel="noopener noreferrer" className="links__link flex-child"><FaGithub /> GitHub</a>
+            <a href="https://www.linkedin.com/in/robinhwkim/" target="_blank" rel="noopener noreferrer" className="links__link flex-child"><FaLinkedin /> LinkedIn</a>
+            <a href={Pdf} target="_blank" rel="noopener noreferrer" className="links__link flex-child"><FaRegNewspaper /> Resume</a>
           </div>
         </div>
           <Chatbot></Chatbot>

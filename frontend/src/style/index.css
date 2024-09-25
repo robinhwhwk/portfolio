@@ -1,8 +1,10 @@
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   padding: 0;
   background-color: #000;
   color: #fff;
+  margin: 0;
 }
 
 header {
@@ -116,106 +118,91 @@ header {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  /* height: 100vh; */
   background-color: #000;
   color: #fff;
+  padding: 20px;
 }
 
 .section__title--intro {
-  font-size: 64px;
+  font-size: 48px;
   margin-bottom: 10px;
+  transition: transform 0.3s ease;
+  text-align: center;
 }
 
 .section__subtitle--intro {
-  font-size: 28px;
+  font-size: 24px;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.section__title--intro:hover,
+.section__subtitle--intro:hover {
+  transform: scale(1.05);
 }
 
 section {
   overflow: hidden;
-  margin-left: 10%;
-  padding: 50px;
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .projects {
   padding: 3.75%;
   display: grid;
-  grid-template-columns: 90%;
-  grid-column-gap: 0;
-  grid-row-gap: 20px;
-  grid-auto-rows: 1fr;
-}
-
-@media only screen and (min-width: 640px) {
-  .projects {
-    grid-template-columns: 90%;
-    grid-column-gap: 5%;
-    grid-row-gap: 40px;
-    grid-auto-rows: 1fr;
-
-  }
-  .projects > div {
-    padding: 20px;
-  }
-}
-
-@media only screen and (min-width: 981px) {
-  .projects {
-    grid-template-columns: 90%;
-    grid-row-gap: 50px;
-    grid-auto-rows: 1fr;
-
-  }
-  .projects > div {
-    padding: 30px;
-  }
+  grid-template-columns: 100%;
+  grid-gap: 20px;
 }
 
 .section__title--projects {
-  font-size: 28px;
-  margin-bottom: 50px;
+  font-size: 24px;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .project h3 {
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-size: 20px;
+  margin-bottom: 15px;
 }
 
 .project p {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
 }
 
-.skills__list.flex-container{
+.skills__list.flex-container {
   display: flex;
   flex-flow: column;
 }
 
 .skills__list .flex-child {
-  padding-left: 20px;
+  padding-left: 10px;
 }
 
-
 .skills {
-  padding: 50px;
+  padding: 30px;
   color: white;
 }
 
 .section__title--skills {
-  font-size: 36px;
-  margin-bottom: 50px;
+  font-size: 24px;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .skill {
-  width: 48%;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .skill h4 {
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 10px;
 }
 
 .skill p {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
 }
 
@@ -223,10 +210,11 @@ footer {
   background-color: #333;
   color: #fff;
   padding: 20px;
+  text-align: center;
 }
 
 footer p {
-  font-size: 14px;
+  font-size: 12px;
   margin: 0;
 }
 
@@ -242,66 +230,65 @@ footer p a:hover {
 
 /* GitHub button styles */
 .project a {
-display: inline-block;
-margin-top: 20px;
-font-size: 14px;
-color: #fff;
-text-decoration: none;
-border: 1px solid #333;
-border-radius: 4px;
-padding: 10px 20px;
-transition: all 0.2s ease-in-out;
-background-color: #333;
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 8px 16px;
+  transition: all 0.2s ease-in-out;
+  background-color: #333;
 }
 
 .project a:hover {
-background-color: #222;
+  background-color: #222;
 }
 
 /* GitHub logo styles */
 .project a .fa-github {
-margin-right: 10px;
-font-size: 18px;
+  margin-right: 8px;
+  font-size: 16px;
 }
-
 
 /* Demo button styles */
 .project .btn-demo {
-display: inline-block;
-margin-top: 20px;
-font-size: 14px;
-color: #fff;
-text-decoration: none;
-border: 1px solid #333;
-border-radius: 4px;
-padding: 10px 20px;
-transition: all 0.2s ease-in-out;
-background-color: #333;
-position: relative;
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 8px 16px;
+  transition: all 0.2s ease-in-out;
+  background-color: #333;
+  position: relative;
 }
 
 .project .btn-demo:hover {
-background-color: #222;
+  background-color: #222;
 }
 
 /* Link arrow styles */
 .project .btn-demo::before {
-content: "";
-display: block;
-width: 0;
-height: 0;
-border-top: 10px solid transparent;
-border-bottom: 10px solid transparent;
-border-left: 10px solid #fff;
-position: absolute;
-top: 50%;
-transform: translateY(-50%);
-right: -20px;
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 8px solid #fff;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -16px;
 }
 
 .flex-container {
   display: flex;
-  flex-flow: wrap;
+  flex-flow: column;
 }
 
 .links.flex-container {
@@ -312,9 +299,12 @@ right: -20px;
   width: fit-content;
   text-decoration: none;
   color: inherit;
+  transition: transform 0.3s ease;
 }
+
 .links a:hover {
   color: #999;
+  transform: scale(1.05);
 }
 
 .flex-child {
@@ -322,27 +312,23 @@ right: -20px;
 }
 
 .links {
-  margin-top: 50px;
-  width: 50%;
+  margin-top: 30px;
+  width: 100%;
 }
 
 .links .flex-child {
-  padding: 10px;
+  padding: 8px;
 }
-
-/* .chatbox {
-  border: 2px solid white;
-} */
 
 form.flex-container {
   flex-flow: column;
 }
 
 .chatbot {
-  width: 500px; /* Adjust as needed */
+  width: 100%;
+  max-width: 500px;
   height: 500px;
   margin: 0 auto;
-  /* border: 1px solid #ccc; */
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
@@ -358,50 +344,51 @@ form.flex-container {
 
 .chatbot header h2 {
   color: #fff;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   display: block;
   margin: auto;
 }
 
 .chatbot .chatbox {
-  padding: 30px 20px 70px 10px;
+  padding: 20px 15px 60px 15px;
   min-height: 60%;
 }
 
 .chatbox .chat {
   display: flex;
+  transition: transform 0.3s ease;
+}
+
+.chatbox .chat p:hover {
+  transform: scale(1.05);
 }
 
 .chatbox .incoming span {
-  height: 32px;
-  width: 32px;
+  height: 28px;
+  width: 28px;
   background: #724ae8;
   color: #fff;
   align-self: flex-end;
   text-align: center;
-  line-height: 32px;
+  line-height: 28px;
   border-radius: 4px;
-  margin: 0 10px 7px 0;
+  margin: 0 8px 5px 0;
 }
 
-.chatbox .outgoing {
-  margin: 20px 0;
-  justify-content: flex-end;
-}
-
+.chatbox .outgoing,
 .chatbox .input {
-  margin: 20px 0;
+  margin: 15px 0;
   justify-content: flex-end;
 }
 
 .chatbox .chat p {
   color: #fff;
   max-width: 75%;
-  font-size: 0.95rem;
-  padding: 12px 14px;
+  font-size: 0.9rem;
+  padding: 10px 12px;
   border-radius: 10px 10px 0 10px;
   background-color: #248bf5;
-  margin: 10px 0 0 0;
+  margin: 8px 0 0 0;
 }
 
 .chatbox .incoming p {
@@ -412,7 +399,7 @@ form.flex-container {
 
 .chatbox .input p {
   background: #000;
-  margin: 0 0 0 0;
+  margin: 0;
   border: 0.1px solid #fff;
 }
 
@@ -424,18 +411,17 @@ form.flex-container {
 
 .chatbot-question {
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .chatbox .input p:hover {
   background-color: #2f2f2f;
 }
 
-
 .chatbot-buttons button {
   background-color: #f0f0f0;
   border: none;
-  padding: 10px 15px;
+  padding: 8px 12px;
   margin-right: 5px;
   cursor: pointer;
 }
@@ -444,45 +430,41 @@ form.flex-container {
   background-color: #e0e0e0;
 }
 
-@media(max-width: 490px) {
-  .chatbot {
-    right: 0;
-    width: 100%;
-  }
-
-}
-
 ul {
   list-style-type: none;
+  padding-left: 0;
 }
 
 .profile-photo {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   display: block;
   margin-left: auto;
   margin-right: auto;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 10px;
+  transition: transform 0.3s ease;
 }
 
+.profile-photo:hover {
+  transform: scale(1.05);
+}
 
 svg tspan {
   fill: white;
 }
 
 .projects-section {
-  padding: 4rem 0;
+  padding: 2rem 0;
   background-color: #000;
 }
 
 .projects-grid {
   display: grid;
-  /* grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); */
-  grid-template-columns: 90%;
-  gap: 2rem;
-  padding: 0 2rem;
+  grid-template-columns: 100%;
+  gap: 1.5rem;
+  padding: 0 1rem;
 }
 
 .project {
@@ -495,21 +477,21 @@ svg tspan {
 }
 
 .project__title {
-  font-size: 1.5rem;
-  margin: 1rem;
+  font-size: 1.3rem;
+  margin: 0.8rem;
   text-align: left;
 }
 
 .project__tech {
-  font-size: 1rem;
-  margin-left: 1rem;
-  margin-top: 0px;
+  font-size: 0.9rem;
+  margin-left: 0.8rem;
+  margin-top: 0;
   text-align: left;
   font-style: italic;
 }
 
 .project__image-container {
-  width: 400px;
+  width: 100%;
   height: auto;
   overflow: hidden;
   display: flex;
@@ -518,7 +500,7 @@ svg tspan {
 }
 
 .project__image {
-  width: 350px;
+  width: 100%;
   height: auto;
   object-fit: cover;
   transition: transform 0.3s ease;
@@ -529,7 +511,7 @@ svg tspan {
 }
 
 .project__description {
-  padding: 1rem;
+  padding: 0.8rem;
   flex-grow: 1;
   font-size: 0.9rem;
 }
@@ -537,7 +519,8 @@ svg tspan {
 .project__links {
   display: flex;
   justify-content: left;
-  padding-left: 1rem;
+  padding-left: 0.8rem;
+  flex-wrap: wrap;
 }
 
 .project__link {
@@ -550,6 +533,8 @@ svg tspan {
   border-radius: 4px;
   transition: background-color 0.3s ease;
   font-size: 0.9rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .project__link:hover {
@@ -560,8 +545,48 @@ svg tspan {
   margin-right: 0.5rem;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .projects-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section__title--intro {
+    font-size: 64px;
+  }
+
+  .section__subtitle--intro {
+    font-size: 28px;
+  }
+
+  .section__title--projects,
+  .section__title--skills {
+    font-size: 36px;
+  }
+
+  section {
+    padding: 50px;
+  }
+
+  .skill {
+    width: 48%;
+  }
+}
+
+@media (min-width: 992px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  body {
+    padding: 0 5%;
+  }
+
+  .intro,
+  .projects-section,
+  .skills,
+  footer {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
