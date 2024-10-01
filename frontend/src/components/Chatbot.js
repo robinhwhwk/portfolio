@@ -14,7 +14,7 @@ const knowledge = {
     },
     "intro": {
       id: "intro",
-      prompts: ["I'm Robin. I'm a student at Georgia Tech pursuing a Bachelor's and a Master's degree in Computer Science.", "I'm expecting to graduate by Spring of 2025."],
+      prompts: ["I'm Robin. I'm a student at Georgia Tech pursuing a Bachelor's and a Master's degree in Computer Science.", "I'm expecting to graduate in 2025."],
       options: [
         {command:"Hobbies?", nextId: "hobby"}, 
         {command:"Send a message", nextId: "message"}],
